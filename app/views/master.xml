@@ -13,7 +13,7 @@
 		<!-- tableview representing all master rows -->
 		<TableView id="table" onClick="openDetail">
 			<HeaderView platform="android">
-				<Label id="header">RSS Reader</Label>
+				<Label id="header">DOU Callendar</Label>
 			</HeaderView>
 		</TableView>
 	</Window>

@@ -2,13 +2,45 @@ var rss = require('rss');
 
 // open detail window
 function openDetail(e) {
-	$.trigger('detail', e);
+	// $.trigger('detail', e);
 }
-
+var data = [
+	{
+		link: "",
+		image: "",
+		title: "new event",
+		date: "29748"
+	},{
+		link: "",
+		image: "",
+		title: "new event",
+		date: "29748"
+	},{
+		link: "",
+		image: "",
+		title: "new event",
+		date: "29748"
+	},{
+		link: "",
+		image: "",
+		title: "new event",
+		date: "29748"
+	},{
+		link: "",
+		image: "",
+		title: "new event",
+		date: "29748"
+	},{
+		link: "",
+		image: "",
+		title: "new event",
+		date: "29748"
+	}
+];
 // Refresh table data from remote RSS feed
 function refreshRss() {
-	rss.loadRssFeed({
-		success: function(data) {
+	// rss.loadRssFeed({
+		// success: function(data) {
 			var rows = [];
 			_.each(data, function(item) {
 				rows.push(Alloy.createController('row', {
@@ -19,8 +51,8 @@ function refreshRss() {
 				}).getView());
 			});
 			$.table.setData(rows);
-		}
-	});
+		// }
+	// });
 }
 
 // do initial load of RSS

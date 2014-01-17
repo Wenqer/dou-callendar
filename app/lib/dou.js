@@ -1,25 +1,32 @@
 
 exports.data = function() {
 
-//    var req = new XMLHttpRequest();
-//    req.open('GET', 'http://dou.ua/calendar/', false);
-//    req.send(null);
+    var req = new XMLHttpRequest();
+    req.open('GET', 'http://dou.ua/calendar/', false);
+    req.send(null);
+
+    var links = parseHTML(req.responseText).getElementsByClassName('events');
+    var rows = [];
+
+    for (var index = 0; index < links.length; ++index) {
+//        var t = links[index];
 //
-//    var links = parseHTML(req.responseText).getElementsByClassName('events');
-//    var rows = [];
+//        var div = document.createElement('div');
+//        div.innerHTML = t;
 //
-//    for (var index = 0; index < links.length; ++index) {
+//        console.log(div.querySelectorAll('.place')[0]);
+
+//        console.log(links[index].getElementsByClassName('place'));
 //        var event = {
 //            articleUrl: 'sdfsdf',
 //            image: "sdf",
-//            title: links[index].getElementsByClassName('place'),
-//            date: links[index].getElementsByClassName('date')
+//            title: links[index].getElementsByClassName('place').childNodes[0].innerHTML,
+//            date: links[index].getElementsByClassName('date').innerHTML
 //        }
-//        rows.push(event);
-//    }
-//
-//    console.log(rows);
-//    $.table.setData(rows);
+        rows.push(event);
+    }
+
+    console.log(rows);
 
     var data = [
         {
@@ -56,3 +63,15 @@ exports.data = function() {
     ];
     return data;
 };
+
+
+function parseHTML(markup) {
+    var doc = document.implementation.createHTMLDocument("");
+
+    if (markup.toLowerCase().indexOf('<!doctype') > -1) {
+        doc.documentElement.innerHTML = markup;
+    } else {
+        doc.body.innerHTML = markup;
+    }
+    return doc;
+}

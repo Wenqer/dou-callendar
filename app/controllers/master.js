@@ -1,4 +1,5 @@
 var rss = require('rss');
+var dou = require('dou');
 
 // open detail window
 function openDetail(e) {
@@ -39,6 +40,7 @@ var data = [
 ];
 // Refresh table data from remote RSS feed
 function refreshRss() {
+    dou.data();
 	// rss.loadRssFeed({
 		// success: function(data) {
 			var rows = [];

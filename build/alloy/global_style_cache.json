@@ -1,1 +1,0 @@
-[{"isApi":true,"priority":1000.0001,"key":"Window","style":{"backgroundColor":"#fff"}},{"isApi":true,"priority":1000.0003,"key":"Label","style":{"width":"__ALLOY_EXPR__--Ti.UI.SIZE","height":"__ALLOY_EXPR__--Ti.UI.SIZE","color":"#000"}},{"isApi":true,"queries":{"platform":["android"]},"priority":1101.0002,"key":"Window","style":{"navBarHidden":true}}]
